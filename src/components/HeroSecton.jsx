@@ -6,14 +6,14 @@ export const HeroSecton = () => {
   return (
     <>
       <div className="w-full bg-white">
-        <div className="flex w-[1500px] pt-12 pb-7 mx-auto items-stretch">
-          <div className="flex flex-col basis-1/4 font-poppins text-base leading-6 tracking-normal">
-            <ul className="space-y-7">
-              <li className="flex items-center gap-8">
+        <div className="flex flex-col lg:pt-12 lg:pb-7 lg:mx-50 lg:flex-row">
+          <div className="flex lg:flex-col lg:basis-1/4 font-poppins lg:text-base mx-5 pt-5 lg:pt-0 lg:mx-0">
+            <ul className="flex flex-row flex-wrap gap-3 items-center justify-between lg:flex-col lg:space-y-7 lg:gap-0">
+              <li className="flex lg:items-center lg:gap-8">
                 Woman's Fashion
                 <img src={dropDown} alt="" className="h-6" />
               </li>
-              <li className="flex items-center gap-14">
+              <li className="flex lg:items-center lg:gap-14">
                 Men's Fashion
                 <img src={dropDown} alt="" className="h-6" />
               </li>
@@ -26,7 +26,7 @@ export const HeroSecton = () => {
               <li>Health & Beauty</li>
             </ul>
           </div>
-          <div className="basis-3/4">
+          <div className="lg:basis-3/4 mt-3 lg:mt-0">
             <img src={hero} className="w-full max-w-full h-auto object-cover" />
           </div>
         </div>
