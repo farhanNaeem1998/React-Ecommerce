@@ -8,7 +8,7 @@ export const HeroSecton = () => {
       <div className="w-full bg-white">
         <div className="flex flex-col lg:pt-12 lg:pb-7 lg:mx-50 lg:flex-row">
           <div className="flex lg:flex-col lg:basis-1/4 font-poppins lg:text-base mx-5 pt-5 lg:pt-0 lg:mx-0">
-            <ul className="flex flex-row flex-wrap gap-3 items-center justify-between lg:flex-col lg:space-y-7 lg:gap-0">
+            <ul className="flex flex-row flex-wrap gap-3 items-center justify-between lg:items-start lg:justify-start lg:flex-col lg:space-y-7 lg:gap-0">
               <li className="flex lg:items-center lg:gap-8">
                 Woman's Fashion
                 <img src={dropDown} alt="" className="h-6" />
