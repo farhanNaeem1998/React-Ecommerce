@@ -32,6 +32,9 @@ export const MainSection1 = () => {
             </div>
           </div>
         </div>
+        <div className="flash-sales-cards w-full flex justify-start overflow-hidden lg:ml-50 border-2 border-gray-200 mt-10">
+          <div>Helloooo</div>
+        </div>
       </div>
     </>
   );
