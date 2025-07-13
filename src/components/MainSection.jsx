@@ -5,7 +5,7 @@ import left from "../assets/left.png";
 import right from "../assets/right.png";
 import axios from "axios";
 
-export const MainSection1 = () => {
+export const MainSection = () => {
   const sliderRef = useRef(null);
   const [products, setProducts] = useState([]);
 
