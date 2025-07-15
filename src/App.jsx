@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TopHeader } from "./components/TopHeader";
 import { Header } from "./components/Header";
 import { HeroSecton } from "./components/HeroSecton";
-import { MainSection1 } from "./components/MainSection";
+import { MainSection } from "./components/MainSection";
 
 function App() {
   return (

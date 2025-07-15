@@ -1,5 +1,16 @@
 import React from "react";
 
 export const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <>
+      <div className=" footer w-full bg-black">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      ;
+    </>
+  );
 };
