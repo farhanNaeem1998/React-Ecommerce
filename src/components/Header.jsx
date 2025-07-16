@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import search from "../assets/Component 2.png";
 import cart from "../assets/Cart1.png";
 import heart from "../assets/Vector.png";
@@ -18,16 +19,16 @@ export const Header = () => {
           <div className="md:hidden lg:flex hidden">
             <ul className="flex gap-15 ">
               <li className="font-['Poppins'] font-normal text-[16px] leading-[24px] text-center">
-                Home
+                <Link to="/">Home</Link>
               </li>
               <li className="font-['Poppins'] font-normal text-[16px] leading-[24px] text-center">
-                Contact
+                <Link to="/contact">Contact</Link>
               </li>
               <li className="font-['Poppins'] font-normal text-[16px] leading-[24px] text-center">
-                About
+                <Link to="/about">About</Link>
               </li>
               <li className="font-['Poppins'] font-normal text-[16px] leading-[24px] text-center">
-                Sign Up
+                <Link to="/signup">Sign Up</Link>
               </li>
             </ul>
           </div>

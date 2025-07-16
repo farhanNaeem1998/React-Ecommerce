@@ -4,6 +4,7 @@ import rect from "../assets/Rectangle 17.png";
 import left from "../assets/left.png";
 import right from "../assets/right.png";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const MainSection = () => {
   const sliderRef = useRef(null);
@@ -67,7 +68,8 @@ export const MainSection = () => {
           ref={sliderRef}
         >
           {products.map((product) => (
-            <div
+            <Link
+              to={`/product/${product.id}`}
               key={product.id}
               className="basis-[44.44%] lg:basis-[22.22%] flex-shrink-0 bg-white rounded-lg shadow p-4"
             >
@@ -80,7 +82,7 @@ export const MainSection = () => {
                 {product.title}
               </h2>
               <p className="text-green-600 font-bold mt-1">${product.price}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
