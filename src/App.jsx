@@ -7,12 +7,17 @@ import { Contact } from "./pages/Contact";
 import { Signup } from "./pages/Signup";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import ProductDetail from "./pages/ProductDetail";
+import { useState } from "react";
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+
+  console.log("Cart Items:", cartItems);
+
   return (
     <Router>
       <TopHeader />
-      <Header />
+      <Header cartItems={cartItems} setCartItems={setCartItems} />
 
       <main>
         <Routes>
@@ -20,7 +25,15 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route
+            path="/product/:id"
+            element={
+              <ProductDetail
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+              />
+            }
+          />
         </Routes>
       </main>
 

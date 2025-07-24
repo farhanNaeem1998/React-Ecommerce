@@ -2,10 +2,25 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-function ProductDetail() {
+function ProductDetail({ cartItems, setCartItems }) {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const addToCart = (product) => {
+    const existingItem = cartItems.find((item) => item.id === product.id);
+    if (existingItem) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+    }
+  };
 
   useEffect(() => {
     axios
@@ -59,7 +74,10 @@ function ProductDetail() {
 
           {/* Action Buttons */}
           <div className="flex gap-4 mt-6">
-            <button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg">
+            <button
+              className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg"
+              onClick={() => addToCart(product)}
+            >
               Add to Cart
             </button>
             <button className="border border-red-500 text-red-500 px-6 py-2 rounded-lg hover:bg-red-50">

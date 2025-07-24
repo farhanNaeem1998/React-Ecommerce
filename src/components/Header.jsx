@@ -4,9 +4,10 @@ import search from "../assets/Component 2.png";
 import cart from "../assets/Cart1.png";
 import heart from "../assets/Vector.png";
 
-export const Header = () => {
+export const Header = ({ cartItems, setCartItems }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchClicked, setSearchClicked] = useState(false);
+
   return (
     <>
       <div className="w-full bg-white">
@@ -37,11 +38,11 @@ export const Header = () => {
               <input type="text" placeholder="What are you looking for?" />
               <img src={search} alt="" className="w-6 h-6" />
             </div>
-            <div
-              className="flex gap-5 items-center flex-row"
-              onClick={() => setSearchClicked(!searchClicked)}
-            >
-              <div className="flex lg:hidden md:hidden">
+            <div className="flex gap-5 items-center flex-row">
+              <div
+                className="flex lg:hidden md:hidden"
+                onClick={() => setSearchClicked(!searchClicked)}
+              >
                 <img src={search} alt="" className="w-8 h-8" />
               </div>
               <div className=" lg:flex md:flex">
@@ -49,6 +50,11 @@ export const Header = () => {
               </div>
               <div className=" lg:flex md:flex">
                 <img src={cart} alt="" className="w-7 h-7" />
+                {cartItems.length > 0 && (
+                  <span className="absolute top-2 right-2 bg-red-500 text-white text-xs rounded-full px-1">
+                    {cartItems.reduce((acc, item) => acc + item.quantity, 0)}
+                  </span>
+                )}
               </div>
               <div
                 className="flex lg:hidden md:flex"
