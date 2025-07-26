@@ -49,6 +49,7 @@ export const Header = ({ cartItems, setCartItems }) => {
                 <img src={heart} alt="" className="w-6 h-6" />
               </div>
               <div className=" lg:flex md:flex">
+                {/* We will add the cart button functionality below.*/}
                 <img src={cart} alt="" className="w-7 h-7" />
                 {cartItems.length > 0 && (
                   <span className="absolute top-2 right-2 bg-red-500 text-white text-xs rounded-full px-1">
