@@ -57,6 +57,7 @@ export const Header = ({ cartItems, setCartItems }) => {
                   </span>
                 )}
               </div>
+              {/* Comment to demonstrate the git push functionality */}
               <div
                 className="flex lg:hidden md:flex"
                 onClick={() => setIsOpen(!isOpen)}
